@@ -85,7 +85,7 @@ const Block4 = async () => {
                         className="animated-underline text-slate-800 text-sm font-semibold underline decoration-amber-500 underline-offset-2"
                         aria-label="About the author"
                       >
-                        Easton Boehm
+                        Virginia Olson
                       </Link>
                       <span>
                         <RxDividerVertical className="text-slate-300" />

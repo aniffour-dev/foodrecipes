@@ -5,7 +5,7 @@ import About from "@/app/components/Static/Pages/About";
 export const metadata: Metadata = {
   title: {
     default: "About",
-    template: "%s | foudrecipes",
+    template: "%s | Foudrecipes",
   },
   description: "Discover our story as trusted tire experts. Learn about our commitment to quality service, automotive expertise, and dedication to customer safety.",
   openGraph: {

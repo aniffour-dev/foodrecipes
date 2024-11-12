@@ -50,7 +50,7 @@ const RecentPosts = async () => {
                       {truncateContent(post.title, 40)}
                     </h3>
                     <p className="text-[11px] text-slate-600">
-                      By: {post.author.node.name || "Easton Boehm"}
+                      By: {post.author.node.name || "Virginia Olson"}
                     </p>
                   </div>
                 </Link>

@@ -165,7 +165,7 @@ export default async function Category({ category }: CategoryProps) {
                         className="animated-underline text-slate-800 text-sm font-semibold underline decoration-amber-500 underline-offset-2"
                         aria-label="About the author"
                       >
-                        Easton Boehm
+                        Virginia Olson
                       </Link>
                       <span>
                         <RxDividerVertical className="text-slate-300" />
@@ -253,7 +253,7 @@ export default async function Category({ category }: CategoryProps) {
                               className="inline size-4 relative -top-[1px]"
                               aria-hidden="true"
                             />{" "}
-                            Easton Boehm
+                            Virginia Olson
                           </span>
                         </div>
                         <time

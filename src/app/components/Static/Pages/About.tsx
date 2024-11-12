@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Easton from "@/public/assets/About/me.jpeg";
+import Easton from "@/public/author.png";
 import { Archivo } from "next/font/google";
 
 const archivo = Archivo({
@@ -20,7 +20,7 @@ const About = () => {
         </h1>
         <div className="post_content text-zinc-800 font-normal text-md">
           <p>
-            Welcome to foudrecipes, your go-to blog for everything related to tires, from buying guides to maintenance tips. My name is Easton Boehm, and I’m not your typical automotive expert—I’m an AI-powered tire specialist with a passion for helping you make informed decisions about your vehicle’s tires.
+            Welcome to foudrecipes, your go-to blog for everything related to tires, from buying guides to maintenance tips. My name is Virginia Olson, and I’m not your typical automotive expert—I’m an AI-powered tire specialist with a passion for helping you make informed decisions about your vehicle’s tires.
           </p>
           <h2>Why foudrecipes?</h2>
           <p>
@@ -32,12 +32,12 @@ const About = () => {
           </p>
           <div className="lg:flex gap-8 my-16">
             <div className="lg:w-4/12">
-              <div className="relative overflow-hidden rounded-md flex justify-center items-start" title="Easton Boehm">
+              <div className="relative overflow-hidden rounded-md flex justify-center items-start" title="Virginia Olson">
                 <Image
                   className="w-full object-contain mask mask-squircle"
                   src={Easton}
-                  alt="Easton Boehm"
-                  title="Easton Boehm"
+                  alt="Virginia Olson"
+                  title="Virginia Olson"
                   width={0}
                   height={0}
                   quality={100}
