@@ -14,6 +14,11 @@ const PopularRecipes = async () => {
   const mainPost = posts[0];
   const sidePosts = posts.slice(0, 5);
 
+  // Check if the necessary image and data are available for the main post
+  if (!mainPost.featuredImage?.node?.sourceUrl) {
+    return <p>Featured image is missing for the main post.</p>;
+  }
+
   return (
     <section className="max-w-[90%] mx-auto my-20 mb-32">
       <div className="lg:flex gap-6">
@@ -23,7 +28,7 @@ const PopularRecipes = async () => {
             aria-label={`View recipe: ${mainPost.title}`}
           >
             <Image
-              src={mainPost.featuredImage?.node?.sourceUrl!}
+              src={mainPost.featuredImage?.node?.sourceUrl || "/default-image.jpg"} // Fallback to a default image
               alt={`Featured image for ${mainPost.title}`}
               width={500}
               height={300}
@@ -53,7 +58,7 @@ const PopularRecipes = async () => {
                     aria-label={`View recipe: ${post.title}`}
                   >
                     <Image
-                      src={post.featuredImage?.node?.sourceUrl!}
+                      src={post.featuredImage?.node?.sourceUrl || "/default-image.jpg"} // Fallback to a default image
                       alt={`Featured image for ${post.title}`}
                       width={500}
                       height={300}
