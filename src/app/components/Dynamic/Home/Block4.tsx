@@ -4,7 +4,6 @@ import Link from "next/link";
 import { cookies_recipes_articles } from "@/apis/graphql/articles";
 import { Archivo } from "next/font/google";
 import { RxDividerVertical } from "react-icons/rx";
-import { GoPlus } from "react-icons/go";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -79,15 +78,6 @@ const Block4 = async () => {
                       className="w-full h-auto"
                     />
                   </Link>
-                  <div className="flex justify-center items-center">
-                    <Link
-                      href={`/${post.slug}`}
-                      className="rounded-full h-20 w-20 bg-orange-500 border-[5px] border-white transition-all hover:bg-amber-400 text-gray-900 -mt-10 flex justify-center items-center"
-                      aria-label={`Read more about ${post.title}`}
-                    >
-                      <GoPlus className="size-10" />
-                    </Link>
-                  </div>
                   <div className="p-4">
                     <div className="flex justify-start items-center gap-1 mt-1 mb-4">
                       <Link

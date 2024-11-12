@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cake_recipes_articles } from "@/apis/graphql/articles";
 import { Archivo } from "next/font/google";
+import { FaHeart } from "react-icons/fa";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const archivo = Archivo({
 // Server-side HTML sanitization function
 const sanitizeHtml = (html: string) => {
   // Remove HTML tags
-  return html.replace(/<[^>]*>/g, '');
+  return html.replace(/<[^>]*>/g, "");
 };
 
 const truncateContent = (content: string, maxLength: number) => {
@@ -34,7 +35,7 @@ const Block5 = async () => {
       aria-label="Wheel Tires Articles"
     >
       <div className="flex justify-center items-center flex-col">
-      <h3
+        <h3
           className={`${archivo.className} text-gray-900 font-bold mb-5 text-3xl text-center`}
         >
           Cake {""}
@@ -43,16 +44,15 @@ const Block5 = async () => {
           </span>
         </h3>
         <p className="text-slate-700 max-w-[580px] text-center mb-8">
-        From classic cakes to creative confections, explore a wide range of cake recipes that bring flavor and fun to every celebration!
+          From classic cakes to creative confections, explore a wide range of
+          cake recipes that bring flavor and fun to every celebration!
         </p>
         {posts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <Link href={`/${post.slug}`} key={post.id}>
                 <article className="relative break-inside-avoid">
-                  <span className="absolute bg-white text-gray-900 text-sm font-semibold ml-2 mt-2 px-2 py-0.5">
-                    {post.categories.nodes[0].name}
-                  </span>
+                <span className="absolute bg-red-600 ml-2 mt-2 h-10 w-10 rounded-full flex justify-center items-center"><FaHeart className="w-5 h-5 text-white" /></span>
                   <Image
                     src={
                       post.featuredImage?.node?.sourceUrl ||
@@ -65,7 +65,7 @@ const Block5 = async () => {
                     height={250}
                     className="w-full h-auto"
                   />
-                  <h4 className="text-lg text-amber-800 transition-all hover:text-amber-950 font-bold my-2">
+                  <h4 className="text-lg text-black transition-all hover:text-amber-600 font-bold my-2">
                     {post.title}
                   </h4>
                   {/* Replace dangerouslySetInnerHTML with direct text rendering */}

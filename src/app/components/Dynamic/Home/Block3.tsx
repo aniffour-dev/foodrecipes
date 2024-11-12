@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { chiecken_recipes_articles } from "@/apis/graphql/articles";
+import { bread_recipes_articles } from "@/apis/graphql/articles";
 import { Archivo } from "next/font/google";
 import { FaHeart } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ const truncateContent = (content: string, maxLength: number) => {
 };
 
 const Block3 = async () => {
-  const posts = await chiecken_recipes_articles();
+  const posts = await bread_recipes_articles();
 
   return (
     <section className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6 mb-24" aria-label="Bread Recipes Articles">

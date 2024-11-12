@@ -28,7 +28,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
     <li className="relative group no-last-gap">
       <Link
         href={href}
-        className={`font-semibold text-black hover:text-orange-500 transition-all text-lg py-[19px]`}
+        className={`font-semibold text-black hover:text-orange-500 transition-all text-md uppercase py-[19px]`}
       >
         {item.label}
         {hasChildItems(item) && (

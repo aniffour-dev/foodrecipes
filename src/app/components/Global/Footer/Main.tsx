@@ -16,13 +16,12 @@ const Main = () => {
       <div className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6">
         <div className="lg:flex gap-10">
           <section className="lg:w-4/12 mt-8 lg:mt-0">
-            <h2 className="text-2xl text-gray-900 font-bold -mb-3">
+            <h2 className="text-xl text-gray-900 font-bold -mb-3 uppercase">
               Who We Are?
             </h2>
-            <div className="bg-amber-200 h-[10px] max-w-[145px] mb-5"></div>
+            <div className="bg-orange-200 h-[10px] max-w-[145px] mb-5"></div>
             <p className="text-md text-slate-500 mb-5">
-              At foudrecipes, we celebrate the joy of driving with easy, reliable
-              tire solutions and expert advice for every driver&#39;s journey!
+            At FoodRecipes, we celebrate the joy of cooking with easy, reliable recipes and expert tips for every home chef&#39;s culinary journey!
             </p>
             <div className="flex items-center gap-1.5">
               <span className="font-semibold text-sm uppercase">
@@ -65,26 +64,26 @@ const Main = () => {
           </section>
 
           <section className="lg:w-2/12 mt-8 lg:mt-0">
-            <h3 className="text-2xl text-gray-900 font-bold -mb-3">
+            <h3 className="text-xl text-gray-900 font-bold -mb-3 uppercase">
               Quick Links
             </h3>
-            <div className="bg-amber-200 h-[10px] max-w-[130px] mb-5"></div>
+            <div className="bg-orange-200 h-[10px] max-w-[130px] mb-5"></div>
             <QuickLinks />
           </section>
 
           <section className="lg:w-2/12 mt-8 lg:mt-0">
-            <h3 className="text-2xl text-gray-900 font-bold -mb-3">
+            <h3 className="text-xl text-gray-900 font-bold -mb-3 uppercase">
               Unself Links
             </h3>
-            <div className="bg-amber-200 h-[10px] max-w-[140px] mb-5"></div>
+            <div className="bg-orange-200 h-[10px] max-w-[140px] mb-5"></div>
             <UnselfLinks />
           </section>
 
           <section className="lg:w-4/12 mt-8 lg:mt-0">
-            <h3 className="text-2xl text-gray-900 font-bold -mb-3">
+            <h3 className="text-xl text-gray-900 font-bold -mb-3 uppercase">
               Keep In Touch
             </h3>
-            <div className="bg-amber-200 h-[10px] max-w-[160px] mb-5"></div>
+            <div className="bg-orange-200 h-[10px] max-w-[160px] mb-5"></div>
             <p className="text-zinc-800 text-md">
               Stay informed about the latest trends in seating plans!
             </p>
@@ -99,7 +98,7 @@ const Main = () => {
         <div className="border-t border-slate-200 my-2.5 pt-6 text-center mt-5">
           © 2024{" "}
           <Link href="/" className="font-semibold">
-            foudrecipes
+            FoudRecipes
           </Link>
           . All rights reserved.
         </div>
