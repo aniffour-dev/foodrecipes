@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
-import { BsArrowRight } from "react-icons/bs";
-import { FiUser } from "react-icons/fi";
 import { Archivo } from "next/font/google";
 import { RxDividerVertical } from "react-icons/rx";
 import RecentPosts from "@/app/components/Dynamic/Sidebar/RecentPosts";
