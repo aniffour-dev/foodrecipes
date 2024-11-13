@@ -100,7 +100,6 @@ const Main = () => {
           <Link href="/" className="font-semibold">
             FoudRecipes
           </Link>
-          . All rights reserved.
         </div>
       </div>
     </footer>

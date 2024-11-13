@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GoChevronRight, GoPlus } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 import { Archivo } from "next/font/google";
@@ -75,7 +75,6 @@ const formatDate = (dateString: string) => {
 };
 
 export default async function Category({ category }: CategoryProps) {
-  const defaultImage = `https://dev-foudrecipes.pantheonsite.io/wp-content/uploads/2024/10/loading.webp`;
   return (
     <main>
       <header className="bg-white py-2.5 !pb-[11px]">
@@ -127,7 +126,7 @@ export default async function Category({ category }: CategoryProps) {
             <div className="h-2.5 bg-amber-200 mb-7 max-w-[280px]"></div>
 
             <section className="columns-1 sm:columns-2 lg:columns-2 xl:columns-2 gap-6 space-y-5">
-              {category.posts.nodes.slice(0, 2).map((post) => (
+              {category.posts.nodes.slice(0, 20).map((post) => (
                 <div
                   className="break-inside-avoid bg-white shadow-md overflow-hidden"
                   key={post.slug}
@@ -149,15 +148,6 @@ export default async function Category({ category }: CategoryProps) {
                       className="w-full h-auto"
                     />
                   </Link>
-                  <div className="flex justify-center items-center">
-                    <Link
-                      href={`/${post.slug}`}
-                      className="rounded-full h-20 w-20 bg-orange-500 border-[5px] border-white transition-all hover:bg-amber-400 text-gray-900 -mt-10 flex justify-center items-center"
-                      aria-label={`Read more about ${post.title}`}
-                    >
-                      <GoPlus className="size-10" />
-                    </Link>
-                  </div>
                   <div className="p-4">
                     <div className="flex justify-start items-center gap-1 mt-1 mb-4">
                       <Link
@@ -193,7 +183,7 @@ export default async function Category({ category }: CategoryProps) {
                 </div>
               ))}
             </section>
-
+{/* 
             <div className="border-y-2 border-slate-200 my-12 py-3">
               <p
                 className={`${archivo.className} text-xl text-center text-gray-900 font-semibold`}
@@ -268,7 +258,7 @@ export default async function Category({ category }: CategoryProps) {
                   <div className="border-b-[1px] border-slate-200 mb-3"></div>
                 </article>
               ))}
-            </div>
+            </div> */}
           </section>
           <aside className="lg:w-3/12">
             <About />
