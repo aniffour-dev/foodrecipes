@@ -3,7 +3,6 @@ import RecentPosts from "@/app/components/Dynamic/Sidebar/RecentPosts";
 import About from "@/app/components/Dynamic/Sidebar/About";
 import SideNewsletter from "@/app/components/Dynamic/Sidebar/Newsletter";
 import { Archivo } from "next/font/google";
-import Link from "next/link";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -24,26 +23,6 @@ const Contact = () => {
             </h1>
           </article>
           <section>
-            <p className="text-slate-800 font-normal text-md mb-2.5">
-              We&#39;d love to hear from you! Whether you have a question about
-              tire maintenance, feedback on our content, or just want to share
-              your automotive experiences, feel free to get in touch.
-            </p>
-            <p className="text-slate-800 font-normal text-md mb-2.5">
-              You can reach us at{" "}
-              <Link
-                href="mailto:hello@foudrecipes.com"
-                className="font-semibold transition-all hover:text-amber-600"
-              >
-                hello@foudrecipes.com,
-              </Link>{" "}
-              and we&#39;ll respond as soon as possible.
-            </p>
-            <p className="text-slate-800 font-normal text-md">
-              Stay connected with us for updates, new tire guides, and vehicle
-              maintenance tips. We&#39;ll here to help make your driving
-              experience both safe and smooth!
-            </p>
             <form action="" className="mt-8">
               <div className="grid grid-cols-2 gap-6 mb-6">
                 <div>
@@ -125,7 +104,7 @@ const Contact = () => {
               </div>
               <button
                 type="button"
-                className="px-6 py-3 bg-orange-600 transition-all hover:bg-amber-700 text-white font-bold rounded-md"
+                className="px-6 py-3 bg-orange-500 transition-all hover:bg-orange-600 text-white font-bold rounded-md"
               >
                 Send Message
               </button>

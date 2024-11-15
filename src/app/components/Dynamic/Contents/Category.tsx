@@ -101,14 +101,14 @@ export default async function Category({ category }: CategoryProps) {
           </ol>
         </nav>
       </header>
-      <section className="bg-amber-50 py-10 border-b-2 border-amber-100">
+      <section className="py-10 bg-white">
         <div className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6">
           <h1
             className={`text-4xl text-center md:text-5xl md:leading-[60px] text-gray-900 font-black mb-5 ${archivo.className}`}
           >
             {category.name}
           </h1>
-          <p className="text-slate-800 text-lg text-center max-w-4xl mx-auto">
+          <p className="text-orange-500 text-md lg:text-xl text-center max-w-4xl mx-auto">
             {category.description}
           </p>
         </div>
