@@ -1,6 +1,7 @@
 import React from "react";
 import { author_details } from "@/apis/graphql/author";
 import Image from "next/image";
+import Chef from "@/public/chef.webp";
 
 const sanitizeHtml = (html: string) => {
   // Basic sanitization - remove HTML tags
@@ -26,7 +27,7 @@ const About = async () => {
       <div className="relative overflow-hidden flex justify-center items-start">
         <Image
           className="w-full object-contain"
-          src={author!.avatar.url}
+          src={Chef}
           alt={author!.name}
           title={author!.name}
           width={0}
