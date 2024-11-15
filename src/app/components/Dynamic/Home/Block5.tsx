@@ -38,14 +38,14 @@ const Block5 = async () => {
         <h3
           className={`${archivo.className} text-gray-900 font-bold mb-5 text-3xl text-center`}
         >
-          Cake {""}
+          Shrimp {""}
           <span className="bg-orange-500 rounded text-white pb-0.5 px-2">
             Recipes
           </span>
         </h3>
         <p className="text-slate-700 max-w-[580px] text-center mb-8">
-          From classic cakes to creative confections, explore a wide range of
-          cake recipes that bring flavor and fun to every celebration!
+          From classic Shrimps to creative confections, explore a wide range of
+          Shrimp recipes that bring flavor and fun to every celebration!
         </p>
         {posts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

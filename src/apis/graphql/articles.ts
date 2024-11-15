@@ -46,7 +46,7 @@ const ChickenRecipes = gql`
       first: 6
       where: {
         orderby: { field: DATE, order: DESC }
-        categoryName: "Chicken Recipes"
+        categoryName: "Chicken"
         status: PUBLISH
       }
     ) {
@@ -94,13 +94,13 @@ export async function chiecken_recipes_articles(): Promise<Post[]> {
   }
 }
 
-const BreadRecipes = gql`
+const BananaBread = gql`
   query GetPosts {
     posts(
       first: 6
       where: {
         orderby: { field: DATE, order: DESC }
-        categoryName: "Bread Recipes"
+        categoryName: "Banana Bread"
         status: PUBLISH
       }
     ) {
@@ -141,7 +141,7 @@ const BreadRecipes = gql`
 // Bread Recipes Posts
 export async function bread_recipes_articles(): Promise<Post[]> {
   try {
-    const data = await client.request<PostsQueryResult>(BreadRecipes);
+    const data = await client.request<PostsQueryResult>(BananaBread);
     return data.posts.nodes;
   } catch {
     return [];
@@ -149,7 +149,7 @@ export async function bread_recipes_articles(): Promise<Post[]> {
 }
 
 // Cookies Recipes Queries
-const CookiesRecipes = gql`
+const Cookies = gql`
   query GetPosts {
     posts(
       first: 6
@@ -195,20 +195,20 @@ const CookiesRecipes = gql`
 // Cookies Recipes Posts
 export async function cookies_recipes_articles(): Promise<Post[]> {
   try {
-    const data = await client.request<PostsQueryResult>(CookiesRecipes);
+    const data = await client.request<PostsQueryResult>(Cookies);
     return data.posts.nodes;
   } catch {
     return [];
   }
 }
 
-const CakeRecipes = gql`
+const Shrimp = gql`
   query GetPosts {
     posts(
       first: 6
       where: {
         orderby: { field: DATE, order: DESC }
-        categoryName: "Cookies Recipes"
+        categoryName: "Shrimp"
         status: PUBLISH
       }
     ) {
@@ -248,7 +248,7 @@ const CakeRecipes = gql`
 // Cake Recipes Posts
 export async function cake_recipes_articles(): Promise<Post[]> {
   try {
-    const data = await client.request<PostsQueryResult>(CakeRecipes);
+    const data = await client.request<PostsQueryResult>(Shrimp);
     return data.posts.nodes;
   } catch {
     return [];
