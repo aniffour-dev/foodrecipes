@@ -183,7 +183,7 @@ const MainContent = ({
       <div className="flex justify-start items-center gap-3 mb-8">
         <div
           className="h-11 w-11 bg-slate-200 rounded-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${Chef})` }}
+          style={{ backgroundImage: `url(${post.author.node.avatar.url})` }}
         ></div>
         <div className="flex justify-center items-start flex-col">
           <p className="text-gray-800 text-sm font-bold">
