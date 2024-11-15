@@ -2,12 +2,54 @@ import React from "react";
 import Logo from "@/app/components/Global/Header/Logo";
 import Menu from "@/app/components/Global/Header/Menu";
 import CallToAction from "@/app/components/Global/Header/CallToAction";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutubeSquare,
+} from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <>
       <div className="bg-orange-500 text-white text-sm text-center py-2.5 italic">
-      Discover the most delicious and trendy recipes of 2024
+        <div>
+          <ul className="flex justify-center items-center gap-2">
+            {[
+              {
+                href: "/facebook",
+                icon: <FaFacebookSquare />,
+                label: "Facebook",
+              },
+              {
+                href: "/twitter",
+                icon: <FaSquareXTwitter />,
+                label: "Twitter",
+              },
+              {
+                href: "/youtube",
+                icon: <FaYoutubeSquare />,
+                label: "YouTube",
+              },
+              {
+                href: "/instagram",
+                icon: <FaInstagramSquare />,
+                label: "Instagram",
+              },
+            ].map(({ href, icon, label }, index) => (
+              <li key={index} className="flex justify-center items-center gap-1">
+                <Link href={href} aria-label={label}>
+                  {React.cloneElement(icon, {
+                    className:
+                      "size-6 text-gray-650 transition-all duration-300 hover:text-gray-900",
+                  })}
+                </Link>
+                <span className="">{label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <nav
         className="py-2.5 sticky top-0 z-50 bg-white shadow"
