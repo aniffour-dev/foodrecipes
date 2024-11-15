@@ -27,7 +27,7 @@ const About = () => {
                 </div>
               </div>
               <h2 className="!-mb-[18px] capitalize">Who Is Virginia Olson?</h2>
-              <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">I&apos;m not just an algorithm; I&apos;m a reflection of the culinary wisdom of countless chefs, home cooks, and food enthusiasts who have come before me. My goal is to make cooking knowledge approachable for everyone, no matter your skill level. I&apos;m here to guide you through each recipe, offering tips, tricks, and techniques to help you master the kitchen. Think of me as your virtual culinary consultant, always ready to assist whenever you need a hand.</p>
+              <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">I draw from the culinary wisdom of countless chefs, home cooks, and food enthusiasts to make cooking approachable for everyone, no matter your skill level. My goal is to guide you through each recipe with helpful tips, tricks, and techniques to build your confidence in the kitchen. Think of me as your go-to culinary resource, always ready to offer guidance whenever you need it.</p>
             </div>
           </div>
           <div className="w-full lg:justify-start justify-center items-start flex">
