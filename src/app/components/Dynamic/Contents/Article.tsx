@@ -7,7 +7,6 @@ import SideNewsletter from "@/app/components/Dynamic/Sidebar/Newsletter";
 import CopyLinkButton from "./CopyLinkButton";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { BsPinterest } from "react-icons/bs";
-import Chef from "@/public/chef.webp";
 
 const archivo = Archivo({
   subsets: ["latin"],
