@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { featured_articles } from "@/apis/graphql/articles";
+import { chiecken_recipes_articles } from "@/apis/graphql/articles";
 import { Archivo } from "next/font/google";
 import { FaHeart } from "react-icons/fa";
 
@@ -12,7 +12,7 @@ const archivo = Archivo({
 });
 
 const Block2 = async () => {
-  const posts = await featured_articles();
+  const posts = await chiecken_recipes_articles();
 
   return (
     <section
