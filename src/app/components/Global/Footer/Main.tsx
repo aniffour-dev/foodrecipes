@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
+  FaPinterest,
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -21,7 +22,9 @@ const Main = () => {
             </h2>
             <div className="bg-orange-200 h-[10px] max-w-[145px] mb-5"></div>
             <p className="text-md text-slate-500 mb-5">
-            At FoodRecipes, we celebrate the joy of cooking with easy, reliable recipes and expert tips for every home chef&#39;s culinary journey!
+              At FoodRecipes, we celebrate the joy of cooking with easy,
+              reliable recipes and expert tips for every home chef&#39;s
+              culinary journey!
             </p>
             <div className="flex items-center gap-1.5">
               <span className="font-semibold text-sm uppercase">
@@ -30,23 +33,28 @@ const Main = () => {
               <ul className="flex items-center gap-1">
                 {[
                   {
-                    href: "/facebook",
+                    href: "https://www.facebook.com/foudrecipes/",
                     icon: <FaFacebookSquare />,
                     label: "Facebook",
                   },
                   {
-                    href: "/twitter",
+                    href: "https://x.com/foudrecipes",
                     icon: <FaSquareXTwitter />,
                     label: "Twitter",
                   },
                   {
-                    href: "/youtube",
+                    href: "https://www.youtube.com/channel/UCQSftRMqU55nnhYfw0Ty9Cg",
                     icon: <FaYoutubeSquare />,
                     label: "YouTube",
                   },
                   {
-                    href: "/instagram",
+                    href: "https://www.instagram.com/foudrecipes/",
                     icon: <FaInstagramSquare />,
+                    label: "Instagram",
+                  },
+                  {
+                    href: "https://www.pinterest.com/foudrecipes/",
+                    icon: <FaPinterest />,
                     label: "Instagram",
                   },
                 ].map(({ href, icon, label }, index) => (

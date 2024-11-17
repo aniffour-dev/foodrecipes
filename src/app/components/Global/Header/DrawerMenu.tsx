@@ -3,6 +3,7 @@ import React from "react";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
+  FaPinterest,
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -33,8 +34,8 @@ const DrawerMenu = () => {
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
-            <Link href="/cake-recipes" className="animated-underline">
-              Cake Recipes
+            <Link href="/shrimp-recipes" className="animated-underline">
+            Shrimp Recipes
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
@@ -60,23 +61,28 @@ const DrawerMenu = () => {
           <ul className="flex items-center gap-1">
             {[
               {
-                href: "/facebook",
+                href: "https://www.facebook.com/foudrecipes/",
                 icon: <FaFacebookSquare />,
                 label: "Facebook",
               },
               {
-                href: "/twitter",
+                href: "https://x.com/foudrecipes",
                 icon: <FaSquareXTwitter />,
                 label: "Twitter",
               },
               {
-                href: "/youtube",
+                href: "https://www.youtube.com/channel/UCQSftRMqU55nnhYfw0Ty9Cg",
                 icon: <FaYoutubeSquare />,
                 label: "YouTube",
               },
               {
-                href: "/instagram",
+                href: "https://www.instagram.com/foudrecipes/",
                 icon: <FaInstagramSquare />,
+                label: "Instagram",
+              },
+              {
+                href: "https://www.pinterest.com/foudrecipes/",
+                icon: <FaPinterest />,
                 label: "Instagram",
               },
             ].map(({ href, icon, label }, index) => (
