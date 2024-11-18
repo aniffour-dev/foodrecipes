@@ -155,7 +155,7 @@ const Cookies = gql`
       first: 6
       where: {
         orderby: { field: DATE, order: DESC }
-        categoryName: "Cookies Recipes"
+        categoryName: "Cookies"
         status: PUBLISH
       }
     ) {
