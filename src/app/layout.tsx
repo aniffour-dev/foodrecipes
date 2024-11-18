@@ -38,7 +38,7 @@ export default function RootLayout({
         <Main />
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=GTM-NQBBX9KZ"
+          src="https://www.googletagmanager.com/gtag/js?id=GTM-PM6TF3JQ"
         />
         <Script
           id="gtag-init" // Added id attribute here
