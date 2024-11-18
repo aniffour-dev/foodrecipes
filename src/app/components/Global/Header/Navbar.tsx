@@ -45,7 +45,7 @@ const Navbar = () => {
                 label: "Pinterest",
               },
               {
-                href: "https://www.pinterest.com/foudrecipes/",
+                href: "https://www.tiktok.com/@foud.recipes",
                 icon: <FaTiktok />,
                 label: "TikTok",
               },
