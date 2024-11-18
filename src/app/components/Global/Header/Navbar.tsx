@@ -6,6 +6,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaPinterest,
+  FaTiktok,
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -41,7 +42,12 @@ const Navbar = () => {
               {
                 href: "https://www.pinterest.com/foudrecipes/",
                 icon: <FaPinterest />,
-                label: "Instagram",
+                label: "Pinterest",
+              },
+              {
+                href: "https://www.pinterest.com/foudrecipes/",
+                icon: <FaTiktok />,
+                label: "TikTok",
               },
             ].map(({ href, icon, label }, index) => (
               <li key={index} className="">
@@ -50,7 +56,7 @@ const Navbar = () => {
                     className:
                       "size-6 text-gray-650 transition-all duration-300 hover:text-gray-900",
                   })}
-                  <span className="">{label}</span>
+                  <span className="hidden lg:block">{label}</span>
                 </Link>
               </li>
             ))}
