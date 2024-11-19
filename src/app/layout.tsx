@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Get the Best Chicken, Cookies, Bread, Cake Recipes",
     template: "%s | FoudRecipes",
   },
-  description: "Discover the ultimate tire guide on sizes, pressure, and wheel selection to improve vehicle safety, performance, and efficiency.",
+  description: "Explore a collection of delicious recipes with step-by-step instructions for every occasion, from quick meals to gourmet dishes, ensuring a perfect cooking experience.",
 };
 
 export default function RootLayout({
