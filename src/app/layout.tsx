@@ -5,7 +5,6 @@ import Navbar from "@/app/components/Global/Header/Navbar";
 import Main from "@/app/components/Global/Footer/Main";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
-import Head from "next/head";
 
 const inter = Inter({
   subsets: ["latin"],
