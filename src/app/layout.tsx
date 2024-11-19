@@ -28,9 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <Head>
-      <meta name="impact-site-verification" content="a7e50abc-7550-4bc1-bedb-d78534de99bb" />
-      </Head>
       <GoogleTagManager gtmId="GTM-PM6TF3JQ" />
       <body className={`${inter.className} antialiased bg-slate-50`}>
         <Navbar />
