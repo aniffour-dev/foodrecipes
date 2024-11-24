@@ -37,7 +37,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
       </Link>
       {hasChildItems(item) && (
         <ul
-          className={`absolute left-0 mt-[15px] min-w-max bg-gray-800 shadow hidden group-hover:block z-40`}
+          className={`absolute left-0 mt-[15px] min-w-max bg-white shadow hidden group-hover:block z-40`}
         >
           {item.childItems.nodes.map((childItem: MenuItem) => (
             <li key={childItem.id}>
@@ -48,7 +48,7 @@ const MenuItemComponent = ({ item }: { item: MenuItem }) => {
                     childItem.uri ||
                     `/${childItem.label.toLowerCase().replace(/\s+/g, "-")}`
                 )}
-                className={`block text-white hover:text-orange-400 text-sm py-2 px-3 border-b-[1px] border-slate-200 uppercase font-semibold`}
+                className={`block text-black hover:text-orange-400 text-sm py-2 px-3 border-b-[1px] border-slate-200 uppercase font-semibold`}
               >
                 {childItem.label}
               </Link>

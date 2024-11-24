@@ -205,7 +205,7 @@ const Search = () => {
               ) : posts.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {posts.map((post) => (
-                    <Link href={`/${post.slug}`} key={post.id}>
+                    <Link href={`/${post.slug}`} key={post.id} onClick={toggleSearch}>
                       <article className="relative break-inside-avoid">
                       <span className="absolute bg-red-600 ml-2 mt-2 h-10 w-10 rounded-full flex justify-center items-center"><FaHeart className="w-5 h-5 text-white" /></span>
                         <Image

@@ -30,11 +30,6 @@ const Navbar = () => {
                 label: "Twitter",
               },
               {
-                href: "https://www.youtube.com/channel/UCQSftRMqU55nnhYfw0Ty9Cg",
-                icon: <FaYoutubeSquare />,
-                label: "YouTube",
-              },
-              {
                 href: "https://www.instagram.com/foudrecipes/",
                 icon: <FaInstagramSquare />,
                 label: "Instagram",
@@ -51,7 +46,11 @@ const Navbar = () => {
               },
             ].map(({ href, icon, label }, index) => (
               <li key={index} className="">
-                <Link href={href} aria-label={label} className="flex justify-center items-center gap-1">
+                <Link
+                  href={href}
+                  aria-label={label}
+                  className="flex justify-center items-center gap-1"
+                >
                   {React.cloneElement(icon, {
                     className:
                       "size-6 text-gray-650 transition-all duration-300 hover:text-gray-900",

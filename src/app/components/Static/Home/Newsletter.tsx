@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Recipe from "@/public/newsletter.webp";
+import Recipe from "@/public/assets/Newsletter/news.webp";
 
 const Newsletter = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -18,47 +18,29 @@ const Newsletter = () => {
     setLastName(e.target.value);
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const sendEmail = () => {
+    setLoading(true);
+
+    fetch("/api/emails", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Email sent successfully!");
+        }
+        return response.json();
+      })
+      .then((data) => setResult(data))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
   };
 
-  const sendEmail = async () => {
-    setLoading(true);
-    setResult({});
-
-    try {
-      const response = await fetch("/api/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ firstName, lastName, email }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      if (data.success) {
-        setResult({ success: data.message || "Email sent successfully!" });
-        // Clear form fields after successful submission
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-      } else {
-        throw new Error(data.message || "Failed to send email");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setResult({
-        error:
-          error instanceof Error ? error.message : "An unknown error occurred",
-      });
-    } finally {
-      setLoading(false);
-    }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
 
   return (
@@ -81,7 +63,10 @@ const Newsletter = () => {
                 objectFit="cover"
                 layout="responsive"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-amber-400/45 to-transparent opacity-75" title="Keep in Touch!"></div>
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-amber-400/45 to-transparent opacity-75"
+                title="Keep in Touch!"
+              ></div>
             </div>
           </div>
           <div className="lg:w-6/12 bg-slate-50 px-10 py-10 lg:py-0 text-gray-900 font-bold text-center flex justify-center items-center flex-col">
@@ -94,7 +79,8 @@ const Newsletter = () => {
               </div>
               <div className="max-w-[400px] mx-auto">
                 <p className="text-slate-600 text-md text-center mb-6 font-normal">
-                Sign up and I&#39;ll send you delicious recipes and cooking tips!
+                  Sign up and I&#39;ll send you delicious recipes and cooking
+                  tips!
                 </p>
                 <form
                   onSubmit={(e) => {
@@ -131,7 +117,7 @@ const Newsletter = () => {
                         type="email"
                         placeholder="Email Address"
                         value={email}
-                        onChange={handleEmailChange}
+                        onChange={handleInputChange}
                         required
                       />
                     </div>

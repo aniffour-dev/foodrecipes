@@ -28,17 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <Head>
-      <meta name="impact-site-verification" content="a7e50abc-7550-4bc1-bedb-d78534de99bb" />
-      </Head>
-      <GoogleTagManager gtmId="GTM-NQBBX9KZ" />
+      <GoogleTagManager gtmId="GTM-PM6TF3JQ" />
       <body className={`${inter.className} antialiased bg-slate-50`}>
         <Navbar />
         {children}
         <Main />
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=GTM-NQBBX9KZ"
+          src="https://www.googletagmanager.com/gtag/js?id=GTM-PM6TF3JQ"
         />
         <Script
           id="gtag-init" // Added id attribute here
