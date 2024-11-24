@@ -21,6 +21,7 @@ export async function POST(request: Request) {
       accepted: result.accepted,
     });
   } catch (error) {
+    console.error(error); // Use the error variable here, like logging it
     return Response.json({ message: "Not Sent!" }, { status: 500 });
   }
 }
