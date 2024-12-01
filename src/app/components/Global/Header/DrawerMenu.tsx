@@ -19,22 +19,27 @@ const DrawerMenu = () => {
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
-            <Link href="/chicken-recipes" className="animated-underline">
+            <Link href="/chicken" className="animated-underline">
               Chicken Recipes
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
-            <Link href="/bread-recipes" className="animated-underline">
+            <Link href="/tasty" className="animated-underline">
+              Chicken Recipes
+            </Link>
+          </li>
+          <li className="text-gray-900 uppercase text-xl font-bold">
+            <Link href="/banana-bread" className="animated-underline">
               Bread Recipes
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
-            <Link href="/cookies-recipes" className="animated-underline">
+            <Link href="/cookies" className="animated-underline">
               Cookies Recipes
             </Link>
           </li>
           <li className="text-gray-900 uppercase text-xl font-bold">
-            <Link href="/shrimp-recipes" className="animated-underline">
+            <Link href="/shrimp" className="animated-underline">
             Shrimp Recipes
             </Link>
           </li>
