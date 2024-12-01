@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Global/Header/Navbar";
 import Main from "@/app/components/Global/Footer/Main";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
+import Head from 'next/head';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <GoogleTagManager gtmId="GTM-PM6TF3JQ" />
+      <Head>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2356442701807253"
+            crossOrigin="anonymous"
+          ></script>
+
+          {/* Google AdSense Meta Tag (Optional) */}
+          <meta name="google-adsense-account" content="ca-pub-2356442701807253" />
+        </Head>
       <body className={`${inter.className} antialiased bg-slate-50`}>
         <Navbar />
         {children}
