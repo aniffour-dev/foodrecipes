@@ -34,7 +34,7 @@ const Navbar = () => {
                 label: "Instagram",
               },
               {
-                href: "https://www.pinterest.com/foudrecipes/",
+                href: "https://www.pinterest.com/VirginiaOlson33/",
                 icon: <FaPinterest />,
                 label: "Pinterest",
               },
