@@ -4,7 +4,6 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaPinterest,
-  FaYoutubeSquare,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
