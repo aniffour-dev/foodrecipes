@@ -75,7 +75,7 @@ const formatDate = (dateString: string) => {
 export default async function Category({ category }: CategoryProps) {
   return (
     <main>
-      <header className="bg-white py-2.5 !pb-[11px]">
+      <header className="bg-white pt-5 py-2.5">
         <nav
           className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6"
           aria-label="Breadcrumb"
@@ -101,18 +101,27 @@ export default async function Category({ category }: CategoryProps) {
           </ol>
         </nav>
       </header>
-      <section className="py-10 bg-white">
-        <div className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6">
-          <h1
-            className={`text-4xl text-center md:text-5xl md:leading-[60px] text-gray-900 font-black mb-5 ${archivo.className}`}
+      <section className="py-10 pb-0 bg-white relative">
+        <div className="relative h-full">
+          <div
+            className="p-16 bg-cover bg-center h-full"
+            style={{ backgroundImage: `url(${category.categoryImage})` }}
           >
-            {category.name}
-          </h1>
-          <p className="text-orange-500 text-md lg:text-xl text-center max-w-4xl mx-auto">
-            {category.description}
-          </p>
+            <div className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6">
+              <h1
+                className={`text-4xl relative z-50 text-center md:text-5xl md:leading-[60px] text-white font-black mb-5 ${archivo.className}`}
+              >
+                {category.name}
+              </h1>
+              <p className="text-orange-50 relative z-50 text-md lg:text-xl text-center max-w-4xl mx-auto">
+                {category.description}
+              </p>
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-40 opacity-75"></div>
         </div>
       </section>
+
       <div className="max-w-[90%] sm:max-w-[95%] md:max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1250px] mx-auto md:px-6 mt-16 mb-16">
         <div className="lg:flex gap-12 mt-5">
           <section className="lg:w-9/12 lg:border-r-[2px] lg:border-slate-100 lg:pr-12">
@@ -181,7 +190,7 @@ export default async function Category({ category }: CategoryProps) {
                 </div>
               ))}
             </section>
-{/* 
+            {/* 
             <div className="border-y-2 border-slate-200 my-12 py-3">
               <p
                 className={`${archivo.className} text-xl text-center text-gray-900 font-semibold`}

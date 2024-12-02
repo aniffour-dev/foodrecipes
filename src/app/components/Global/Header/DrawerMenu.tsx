@@ -76,19 +76,14 @@ const DrawerMenu = () => {
                 label: "Twitter",
               },
               {
-                href: "https://www.youtube.com/channel/UCQSftRMqU55nnhYfw0Ty9Cg",
-                icon: <FaYoutubeSquare />,
-                label: "YouTube",
-              },
-              {
                 href: "https://www.instagram.com/foudrecipes/",
                 icon: <FaInstagramSquare />,
                 label: "Instagram",
               },
               {
-                href: "https://www.pinterest.com/foudrecipes/",
+                href: "https://www.pinterest.com/VirginiaOlson33/",
                 icon: <FaPinterest />,
-                label: "Instagram",
+                label: "Pinterest",
               },
             ].map(({ href, icon, label }, index) => (
               <li key={index}>

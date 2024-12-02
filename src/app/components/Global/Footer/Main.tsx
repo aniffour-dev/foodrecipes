@@ -47,9 +47,9 @@ const Main = () => {
                     label: "Instagram",
                   },
                   {
-                    href: "https://www.pinterest.com/foudrecipes/",
+                    href: "https://www.pinterest.com/VirginiaOlson33/",
                     icon: <FaPinterest />,
-                    label: "Instagram",
+                    label: "Pinterest",
                   },
                 ].map(({ href, icon, label }, index) => (
                   <li key={index}>
