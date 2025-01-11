@@ -71,6 +71,7 @@ const Navbar = () => {
               <Logo />
             </div>
             <Menu />
+            
             <div>
               <CallToAction />
             </div>
